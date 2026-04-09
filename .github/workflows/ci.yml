@@ -37,6 +37,6 @@ jobs:
                 script: |
                     docker rm -f portfolio || echo "Container not found, skipping removal."
                     docker rmi -f ${{secrets.Docker_USERNAME}}/portfolio-app || echo "image do not exist"
-                    docker run -d --name ciportfollio -p 8081:80 ${{secrets.Docker_USERNAME}}/portfolio-app
+                    docker run -d --name portfollio1 -p 8081:80 ${{secrets.Docker_USERNAME}}/portfolio-app
 
 
